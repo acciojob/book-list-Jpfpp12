@@ -5,6 +5,11 @@ function addBook() {
             const author = document.getElementById('author').value;
             const isbn = document.getElementById('isbn').value;
             
+            if (title === '' || author === '' || isbn === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+            
             const list = document.getElementById('book-list');
             const row = document.createElement('tr');
             
